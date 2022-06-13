@@ -1,13 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import ProgrammationView from '../views/ProgrammationView.vue'
+import ArtistesView from '../views/ArtistesView.vue'
+import ConcertView from '../views/ConcertView.vue'
+import ContactView from '../views/ContactView.vue'
+import FestivalView from '../views/FestivalView.vue'
+import ArtisteView from '../views/ArtisteView.vue'
+import MentionsLegalesView from '../views/MentionsLegalesView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: HomeView
+      path: '/Accueil', name: 'AccueilView', component: AccueilVIew,
+      path: '/Programmation', name: 'programmationView', component: ProgrammationView,
+      path: '/Artistes', name: 'artistesView', component: ArtistesView,
+      path: '/Concert', name: 'concertView', component: ConcertView,
+      path: '/Contact', name: 'contactView', component: ContactView,
+      path: '/Festival', name: 'festivalView', component: FestivalView,
+      path: '/Artiste', name: 'artisteView', component: ArtisteView,
+      path: '/MentionsLegales', name: 'mentionlegalesView', component: MentionsLegalesView
+
     },
     {
       path: '/about',
